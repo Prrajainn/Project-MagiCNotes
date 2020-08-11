@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <title> MagiCNotes </title>
+  <style>
+
+    body {
+      background-image: url("notes2.jpg");
+
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://github.com/Prrajainn">GitHub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="magicNotes.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+        <button style="background-color: red;" class="btn btn-outline-success my-2 my-sm-0"
+          type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-10">
+        <h1 style="color: gr">Welcome To Magic Notes</h1>
+        <br>
+        <div style="border: solid ; background-color: transparent ; border-color:green blue red yellow " class="card">
+          <div class="card-body">
+            <h3 style="color:yellow;" class="card-title">Add a note <i style="color: red ;"
+                class="fas fa-hat-wizard"></i></h3>
+            <div class="form-group">
+    
+              <textarea placeholder="Write Here"
+                style=" border-color: rgba(0, 0, 0, 0.589); background-color: gainsboro; " class="form-control"
+                id="addTxt" rows="3"></textarea>
+            </div>
+            <button class="btn btn-outline-success" id="addBtn">Add Note </button>
+          </div>
+        </div>
+        <hr color="black">
+        <h1>Your Notes <i style="color: seagreen;" class="fas fa-sticky-note"></i></h1>
+        <hr color="blue">npm
+        <hr color="black">
+        <div id="notes" class="row container-fluid"></div>
+      </div>
+      <div class="col-2">
+        <canvas id="canvas" width="200" height="200" style="background-color: black; margin-left: 300px;"
+    >
+      </div>
+    </div>
+  </div>
+  
+    <div class="container" style="position: relative;">
+      <div class="row">
+        <div class="col-7">
+        </div>
+        
+      </div>
+    </div>
+
+
+
+  
+    <script src="bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="clock.js"></script>
+</body>
+
+</html>
