@@ -1,6 +1,6 @@
  
 console.log("Welcome to notes app. This is app.js");
-// Pehle hi show notes islie kiya taaki hamesha pehle dikhaye refresh hone ke baad bhi page
+
 showNotes();
 
 // If user adds a note, add it to the localStorage
@@ -30,7 +30,7 @@ function showNotes() {
     notesObj = JSON.parse(notes);
   }
   let html = "";
-  notesObj.forEach(function(element, index) { // element maane andar ka content
+  notesObj.forEach(function(element, index) { 
     html += `
             <div class="noteCard my-2 mx-2 card " style="width: 17rem;">
                     <div class="card-body">
@@ -62,15 +62,14 @@ function deleteNote(index) {
 
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj)); // update kar rhe hein
-  showNotes();// firse show kar rhe hein
-}
+  showNotes();
 
 
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
 
     let inputVal = search.value.toLowerCase();
-    // console.log('Input event fired!', inputVal);
+  
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
@@ -83,11 +82,3 @@ search.addEventListener("input", function(){
         // console.log(cardTxt);
     })
 })
-
-/*
-Further Features:
-1. Add Title
-2. Mark a note as Important
-3. Separate notes by user
-4. Sync and host to web server 
-*/ 
